@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Count total SBo installed on your Slackware
+
+DIR_PACKAGES='/var/log/packages/'
+i='0'
+cd "$DIR_PACKAGES" || exit 1
+for count in *SBo; do
+    i=$(($i + 1))
+    echo "$count"
+done
+echo -e "\n\033[37;44;1mTotal SBO: ${i}\033[m"
