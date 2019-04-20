@@ -8,4 +8,4 @@ for count in *SBo; do
     i=$(($i + 1))
     echo "$count"
 done
-echo -e "\n\033[37;44;1mTotal SBO: ${i}\033[m"
+[[ "$i" -gt '0' ]] && echo -e "\n\033[37;44;1mTotal SBO: ${i}\033[m"
